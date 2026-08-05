@@ -1,2 +1,2 @@
-# JoySDK for Android
-This library allows you to integrate JoySDK into your Android app.
+# JoyPlay for Android
+This library allows you to integrate JoyPlay into your Android app.
