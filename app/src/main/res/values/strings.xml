@@ -1,3 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">JoySDKDemo</string>
+    <string name="app_name">JoyPlay Demo</string>
+    <string name="full_screen">Full Screen</string>
+    <string name="half_screen">Half Screen</string>
+    <string name="large_half_screen">Large Half\nScreen</string>
+    <string name="enter_game">Enter Game</string>
+    <string name="open_game">Open Game</string>
+    <string name="close_room">Close Room</string>
+    <string name="recharge_dialog_title">Recharge Simulation</string>
+    <string name="recharge_dialog_message">This is a simulated recharge dialog. After completion, the game will be notified to refresh the balance.</string>
+    <string name="recharge_dialog_cancel">Cancel</string>
+    <string name="recharge_dialog_confirm">Recharge Complete</string>
 </resources>

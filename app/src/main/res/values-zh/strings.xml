@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JoyPlay Demo</string>
+    <string name="full_screen">全屏</string>
+    <string name="half_screen">半屏</string>
+    <string name="large_half_screen">大半屏</string>
+    <string name="enter_game">进入游戏</string>
+    <string name="open_game">打开游戏</string>
+    <string name="close_room">关闭直播间</string>
+    <string name="recharge_dialog_title">模拟充值</string>
+    <string name="recharge_dialog_message">这是一个模拟充值弹窗。充值完成后将通知游戏刷新余额。</string>
+    <string name="recharge_dialog_cancel">取消</string>
+    <string name="recharge_dialog_confirm">充值完成</string>
+</resources>

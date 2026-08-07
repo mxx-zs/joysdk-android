@@ -12,9 +12,16 @@
 /captures
 .externalNativeBuild
 .cxx
+.gradle/
+.idea/
 local.properties
 .idea/dbnavigator.xml
 *.apk
 /app/release
 /.idea/
 
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+app/build/

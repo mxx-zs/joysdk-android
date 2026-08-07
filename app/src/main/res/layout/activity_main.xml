@@ -1,113 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.joysdk.demo.MainActivity">
-
-    <ImageView
-        android:id="@+id/iv_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/icon_bg" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:overScrollMode="never"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:spanCount="3"
-        tools:listitem="@layout/item_game_info" />
+    android:background="@color/page_background">
 
     <Button
-        android:id="@+id/btn_mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="切换到列表模式"
+        android:id="@+id/openGameButton"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_open_game_primary"
+        android:backgroundTint="@color/joy_primary"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="16dp"
+        android:text="@string/open_game"
         android:textAllCaps="false"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/screenModeGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_hall"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/screenModeGroup"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="20dp"
-        android:text="大厅"
-        android:textAllCaps="false"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/rv"
+        android:baselineAligned="false"
+        android:checkedButton="@id/fullScreenOption"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dp"
-        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:id="@+id/fullScreenOption"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_screen_option"
+            android:button="@null"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/full_screen"
+            android:textColor="@color/screen_option_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/halfScreenOption"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_screen_option"
+            android:button="@null"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/half_screen"
+            android:textColor="@color/screen_option_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:gravity="center|end"
-                android:text="AppKey:"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/et_app_key"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:gravity="center|end"
-                android:text="token:"
-                android:textColor="@color/white" />
-
-            <EditText
-                android:id="@+id/et_token"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginTop="20dp"
-            android:focusable="true"
-            android:text="重设key和token"
-            android:textAllCaps="false" />
-    </LinearLayout>
+        <RadioButton
+            android:id="@+id/largeHalfScreenOption"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_screen_option"
+            android:button="@null"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/large_half_screen"
+            android:textColor="@color/screen_option_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
